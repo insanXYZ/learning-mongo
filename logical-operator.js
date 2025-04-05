@@ -1,13 +1,14 @@
 //LOGICAL OPERATOR
 //`db.<collectionName>.find({
 //$operator: [
-//{},
-//{}
-//]
+//    {},
+//    {}
+//  ]
 //})`
 
+//where {} and {}
 db.products.find({
-  $and:[ //where {} and {}
+  $and:[ 
     {
       tags: {
         $in : ["laptop"]
@@ -20,8 +21,9 @@ db.products.find({
   ]
 })
 
+//where {} or {}
 db.products.find({
-  $or:[ //where {} or {}
+  $or:[ 
     {
       tags: {
         $in : ["laptop"]
@@ -34,8 +36,9 @@ db.products.find({
   ]
 })
 
+//where {} nor {}
 db.products.find({
-  $nor:[ //where {} nor {}
+  $nor:[ 
     {
       tags: {
         $in : ["laptop"]
@@ -48,9 +51,10 @@ db.products.find({
   ]
 })
 
+//where tags not in []
 db.products.find({
   tags : {
-    $not : { //where tags not in []
+    $not : { 
       $in : ["laptop"]
     }
   }
