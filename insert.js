@@ -38,3 +38,14 @@ db.products.insertOne(
     },
   }
 )
+
+//custom _id
+db.products.insertOne(
+  {
+    "_id":"Asics",
+    "name":"Asics",
+    "description":"Super premium sport shoes",
+    "tags":["shoes","running","trail run"],
+    "price": 7800,
+  }
+)
