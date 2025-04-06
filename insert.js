@@ -39,6 +39,23 @@ db.products.insertOne(
   }
 )
 
+db.customers.insertMany([
+  {
+    name: "lapsong",
+    customfields : {
+      hobby : ["eat","riding"],
+      gender: "male"
+    }
+  },
+  {
+    name: "sam",
+    customFields: {
+      gender: "female",
+      address: "bengkok"
+    }
+  }
+])
+
 //custom _id
 db.products.insertOne(
   {
@@ -49,3 +66,4 @@ db.products.insertOne(
     "price": 7800,
   }
 )
+

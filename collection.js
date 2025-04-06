@@ -18,4 +18,7 @@ db.products
 
 db.getCollectionInfos()
 
+// drop collection
+
+db.products.drop()
 
